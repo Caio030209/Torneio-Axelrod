@@ -11,7 +11,7 @@ class Program
         Console.WriteLine("Escolhas: C = Cooperar, T = Trair. Digite 'sair' para encerrar.\n");
 
 // Pontuações
-        var payoff = new Dictionary<(Move you, Move other), (int youScore, int otherScore)>()
+        var pontos = new Dictionary<(Move voce, Move other), (int PontosJogador, int PontosCPU)>()
         {
             {(Move.Cooperar, Move.Cooperar), (3,3)},
             {(Move.Cooperar, Move.Trair),    (0,5)},
@@ -19,8 +19,8 @@ class Program
             {(Move.Trair,    Move.Trair),    (1,1)}
         };
 
-        int totalYou = 0, totalMachine = 0;
-        List<(Move you, Move machine)> history = new();
+        int totalVoce = 0, totalCPU = 0;
+        List<(Move voce, Move CPU)> historico = new();
 
         bool primeiroTurno = true;
         while (true)
@@ -30,52 +30,52 @@ class Program
             if (input == null) continue;
             if (input == "sair" || input == "exit" ) break;
 
-            Move playerMove;
-            if (input == "c" || input == "cooperar" || input == "cooperate")
-                playerMove = Move.Cooperar;
-            else if (input == "t" || input == "trair" || input == "defect")
-                playerMove = Move.Trair;
+            Move MovimentoJogador;
+            if (input == "c")
+                MovimentoJogador = Move.Cooperar;
+            else if (input == "t")
+                MovimentoJogador = Move.Trair;
             else
             {
                 Console.WriteLine("Entrada inválida — digite 'C' para cooperar, 'T' para trair, ou 'sair'.");
                 continue;
             }
 
-            // Máquina: Tit-for-Tat, mas inicia traindo.
-            Move machineMove;
+            // CPU: Tit-for-Tat, mas inicia traindo.
+            Move MovimentoCPU;
             if (primeiroTurno)
             {
-                machineMove = Move.Trair; // começa traindo
+                MovimentoCPU = Move.Trair; // começa traindo
                 primeiroTurno = false;
             }
             else
             {
                 // copia a jogada anterior do jogador
-                var last = history[^1].you;
-                machineMove = last;
+                var last = historico[^1].voce;
+                MovimentoCPU = last;
             }
 
-            history.Add((playerMove, machineMove));
+            historico.Add((MovimentoJogador, MovimentoCPU));
 
-            var scores = payoff[(playerMove, machineMove)];
-            totalYou += scores.youScore;
-            totalMachine += scores.otherScore;
+            var scores = pontos[(MovimentoJogador, MovimentoCPU)];
+            totalVoce += scores.PontosJogador;
+            totalCPU += scores.PontosCPU;
 
-            Console.WriteLine($"\nVocê: {FormatMove(playerMove)}  |  Máquina: {FormatMove(machineMove)}");
-            Console.WriteLine($"Pontuação desta rodada -> Você: {scores.youScore} | Máquina: {scores.otherScore}");
-            Console.WriteLine($"Pontuação total -> Você: {totalYou} | Máquina: {totalMachine}\n");
+            Console.WriteLine($"\nVocê: {FormatMove(MovimentoJogador)}  |  CPU: {FormatMove(MovimentoCPU)}");
+            Console.WriteLine($"Pontuação desta rodada -> Você: {scores.PontosJogador} | CPU: {scores.PontosCPU}");
+            Console.WriteLine($"Pontuação total -> Você: {totalVoce} | CPU: {totalCPU}\n");
 
             // Mostrar histórico resumido
-            Console.WriteLine("Histórico (Você / Máquina):");
-            for (int i = 0; i < history.Count; i++)
+            Console.WriteLine("Histórico (Você / CPU):");
+            for (int i = 0; i < historico.Count; i++)
             {
-                Console.WriteLine($"{i+1}: {FormatMove(history[i].you)} / {FormatMove(history[i].machine)}");
+                Console.WriteLine($"{i+1}: {FormatMove(historico[i].voce)} / {FormatMove(historico[i].CPU)}");
             }
             Console.WriteLine(new string('-', 40));
         }
 
         Console.WriteLine("\nJogo finalizado.");
-        Console.WriteLine($"Pontuação final -> Você: {totalYou} | Máquina: {totalMachine}");
+        Console.WriteLine($"Pontuação final -> Você: {totalVoce} | CPU: {totalCPU}");
         Console.WriteLine("Obrigado por jogar!");
     }
 
