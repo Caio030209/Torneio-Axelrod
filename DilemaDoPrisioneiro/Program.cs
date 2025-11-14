@@ -7,10 +7,8 @@ class Program
 
     static void Main()
     {
-        Console.WriteLine("Torneio de Axelrod");
         Console.WriteLine("Escolhas: C = Cooperar, T = Trair. Digite 'sair' para encerrar.\n");
 
-// Pontuações
         var pontos = new Dictionary<(Move voce, Move other), (int PontosJogador, int PontosCPU)>()
         {
             {(Move.Cooperar, Move.Cooperar), (3,3)},
@@ -41,16 +39,14 @@ class Program
                 continue;
             }
 
-            // CPU: Tit-for-Tat, mas inicia traindo.
             Move MovimentoCPU;
             if (primeiroTurno)
             {
-                MovimentoCPU = Move.Trair; // começa traindo
+                MovimentoCPU = Move.Trair; 
                 primeiroTurno = false;
             }
             else
             {
-                // copia a jogada anterior do jogador
                 var last = historico[^1].voce;
                 MovimentoCPU = last;
             }
@@ -65,7 +61,7 @@ class Program
             Console.WriteLine($"Pontuação desta rodada -> Você: {scores.PontosJogador} | CPU: {scores.PontosCPU}");
             Console.WriteLine($"Pontuação total -> Você: {totalVoce} | CPU: {totalCPU}\n");
 
-            // Mostrar histórico resumido
+            // Exibe histórico
             Console.WriteLine("Histórico (Você / CPU):");
             for (int i = 0; i < historico.Count; i++)
             {
@@ -74,7 +70,7 @@ class Program
             Console.WriteLine(new string('-', 40));
         }
 
-        Console.WriteLine("\nJogo finalizado.");
+        Console.WriteLine("\nFim de jogo");
         Console.WriteLine($"Pontuação final -> Você: {totalVoce} | CPU: {totalCPU}");
         Console.WriteLine("Obrigado por jogar!");
     }
