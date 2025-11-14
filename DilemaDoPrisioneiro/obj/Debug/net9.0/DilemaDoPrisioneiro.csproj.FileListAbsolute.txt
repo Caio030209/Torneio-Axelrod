@@ -12,3 +12,4 @@ C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\n
 C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.pdb
 C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.genruntimeconfig.cache
 C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\ref\DilemaDoPrisioneiro.dll
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.sourcelink.json
