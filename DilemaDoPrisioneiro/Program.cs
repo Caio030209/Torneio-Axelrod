@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 class Program
 {
-    enum Move { Cooperate, Defect }
+    enum Move {Cooperar, Trair }
 
     static void Main()
     {
         Console.WriteLine("Torneio de Axelrod");
-        Console.WriteLine("Escolhas: C = Cooperar, T = Trair (Defect). Digite 'sair' para encerrar.\n");
+        Console.WriteLine("Escolhas: C = Cooperar, T = Trair. Digite 'sair' para encerrar.\n");
 
 // Pontuações
         var payoff = new Dictionary<(Move you, Move other), (int youScore, int otherScore)>()
         {
-            {(Move.Cooperate, Move.Cooperate), (3,3)},
-            {(Move.Cooperate, Move.Defect),    (0,5)},
-            {(Move.Defect,    Move.Cooperate), (5,0)},
-            {(Move.Defect,    Move.Defect),    (1,1)}
+            {(Move.Cooperar, Move.Cooperar), (3,3)},
+            {(Move.Cooperar, Move.Trair),    (0,5)},
+            {(Move.Trair,    Move.Cooperar), (5,0)},
+            {(Move.Trair,    Move.Trair),    (1,1)}
         };
 
         int totalYou = 0, totalMachine = 0;
@@ -32,9 +32,9 @@ class Program
 
             Move playerMove;
             if (input == "c" || input == "cooperar" || input == "cooperate")
-                playerMove = Move.Cooperate;
+                playerMove = Move.Cooperar;
             else if (input == "t" || input == "trair" || input == "defect")
-                playerMove = Move.Defect;
+                playerMove = Move.Trair;
             else
             {
                 Console.WriteLine("Entrada inválida — digite 'C' para cooperar, 'T' para trair, ou 'sair'.");
@@ -45,7 +45,7 @@ class Program
             Move machineMove;
             if (primeiroTurno)
             {
-                machineMove = Move.Defect; // começa traindo
+                machineMove = Move.Trair; // começa traindo
                 primeiroTurno = false;
             }
             else
@@ -81,6 +81,6 @@ class Program
 
     static string FormatMove(Move m)
     {
-        return m == Move.Cooperate ? "C (Cooperar)" : "T (Trair)";
+        return m == Move.Cooperar ? "C (Cooperar)" : "T (Trair)";
     }
 }
