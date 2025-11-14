@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 class Program
 {
-    enum Move {Cooperar, Trair }
+    enum Move { Cooperar, Trair }
 
     static void Main()
     {
