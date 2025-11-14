@@ -26,7 +26,7 @@ class Program
         while (true)
         {
             Console.Write("Sua jogada (C/T ou 'sair'): ");
-            string input = Console.ReadLine()?.Trim().ToLowerInvariant();
+            string? input = Console.ReadLine()?.Trim().ToLowerInvariant();
             if (input == null) continue;
             if (input == "sair" || input == "exit" ) break;
 
