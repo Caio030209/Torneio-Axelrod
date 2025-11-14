@@ -1,0 +1,14 @@
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\bin\Debug\net9.0\DilemaDoPrisioneiro.exe
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\bin\Debug\net9.0\DilemaDoPrisioneiro.deps.json
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\bin\Debug\net9.0\DilemaDoPrisioneiro.runtimeconfig.json
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\bin\Debug\net9.0\DilemaDoPrisioneiro.dll
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\bin\Debug\net9.0\DilemaDoPrisioneiro.pdb
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.AssemblyInfoInputs.cache
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.AssemblyInfo.cs
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.csproj.CoreCompileInputs.cache
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.dll
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\refint\DilemaDoPrisioneiro.dll
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.pdb
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\DilemaDoPrisioneiro.genruntimeconfig.cache
+C:\Users\conta\Downloads\Axelrod\Torneio-Axelrod\DilemaDoPrisioneiro\obj\Debug\net9.0\ref\DilemaDoPrisioneiro.dll
